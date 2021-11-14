@@ -1,3 +1,4 @@
+import { Routes, Route } from "react-router-dom";
 import { useParams } from "@/hooks/useParams";
 import Team from "@/features/racing/Team";
 import Driver from "@/features/racing/Driver";
@@ -10,13 +11,19 @@ const Main = () => {
 
   return (
     <main>
-      {team && <Team {...{ team }} />}
-      {driver && (
-        <>
-          <hr />
-          <Driver {...{ driver }} />
-        </>
-      )}
+      <Routes>
+        <Route path=":team" element={<Team {...{ team }} />}>
+          <Route
+            path=":driver"
+            element={
+              <>
+                <hr />
+                <Driver {...{ driver }} />
+              </>
+            }
+          />
+        </Route>
+      </Routes>
     </main>
   );
 };
