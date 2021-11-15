@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { Outlet } from "react-router-dom";
 import Image from "@/components/Image";
 import chiefImage from "@/assets/images/chief.png";
@@ -11,4 +12,4 @@ const Team = ({ team }) => (
   </>
 );
 
-export default Team;
+export default memo(Team);

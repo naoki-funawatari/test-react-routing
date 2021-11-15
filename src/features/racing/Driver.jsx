@@ -1,3 +1,4 @@
+import { memo } from "react";
 import Image from "@/components/Image";
 import racerImage from "@/assets/images/racer.png";
 import carImage from "@/assets/images/car.png";
@@ -11,4 +12,4 @@ const Driver = ({ driver }) => (
   </>
 );
 
-export default Driver;
+export default memo(Driver);
