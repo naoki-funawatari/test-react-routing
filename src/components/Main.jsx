@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { Outlet } from "react-router-dom";
 
 const Main = () => (
@@ -6,4 +7,4 @@ const Main = () => (
   </main>
 );
 
-export default Main;
+export default memo(Main);
