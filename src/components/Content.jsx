@@ -1,10 +1,10 @@
 import Nav from "@/components/Nav";
-import Main from "@/components/Main";
+import MainRouter from "@/routers/MainRouter";
 
 const Content = () => (
   <div id="content">
     <Nav />
-    <Main />
+    <MainRouter />
   </div>
 );
 

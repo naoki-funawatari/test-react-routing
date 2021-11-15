@@ -1,8 +1,8 @@
-import MainRouter from "@/routers/MainRouter";
+import { Outlet } from "react-router-dom";
 
 const Main = () => (
   <main>
-    <MainRouter />
+    <Outlet />
   </main>
 );
 

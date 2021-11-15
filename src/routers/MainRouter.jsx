@@ -1,5 +1,6 @@
 import { useRoutes } from "react-router-dom";
 import { useParams } from "@/hooks/useParams";
+import Main from "@/components/Main";
 import Team from "@/features/racing/Team";
 import Driver from "@/features/racing/Driver";
 import teams from "@/assets/data/teams.json";
@@ -11,12 +12,18 @@ const MainRouter = () => {
 
   const router = useRoutes([
     {
-      path: ":team",
-      element: <Team {...{ team }} />,
+      path: "/",
+      element: <Main />,
       children: [
         {
-          path: ":driver",
-          element: <Driver {...{ driver }} />,
+          path: ":team",
+          element: <Team {...{ team }} />,
+          children: [
+            {
+              path: ":driver",
+              element: <Driver {...{ driver }} />,
+            },
+          ],
         },
       ],
     },
