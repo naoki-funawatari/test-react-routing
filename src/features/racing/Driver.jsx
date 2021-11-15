@@ -4,6 +4,7 @@ import carImage from "@/assets/images/car.png";
 
 const Driver = ({ driver }) => (
   <>
+    <hr />
     <h2>{driver.driverName}</h2>
     <Image src={racerImage} alt="racer" />
     <Image src={carImage} alt="car" />
